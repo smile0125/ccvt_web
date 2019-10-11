@@ -1,0 +1,118 @@
+@import "./mixin";
+
+img {
+  width: 100%;
+}
+
+//导航-logo
+.logo {
+  height: 32px;
+  margin: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+//顶部内容靠右显示
+.top-nav {
+  @include flex(flex-end, '')
+}
+
+//固定左侧导航
+.custom-left-nav {
+  position: fixed !important;
+  z-index: 100;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+//中间内容
+.custom-content {
+  padding-left: 200px;
+  padding-top: 64px;
+}
+
+//固定顶部导航
+.custom-top-nav {
+  position: fixed !important;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  right: 0;
+}
+
+//左侧菜单NavLink
+.slide-menu-navLink {
+  display: inline-block !important;
+}
+
+//icon
+.icon {
+  cursor: pointer;
+}
+
+.tab-edit-icon-box {
+  @include flex(unset, '');
+
+  .icon:first-child {
+    margin-right: 2rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+
+//flex
+.flex {
+  @include flex(unset);
+}
+
+.flex.space-between {
+  @include flex(space-between, '')
+}
+
+//upload
+.upload-box {
+  background: #eeeeee;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  position: relative;
+  border: 1px dashed #5252b1;
+
+  .upload {
+    line-height: 6rem;
+    opacity: 0;
+    width: 100%;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//开关
+.switch-item {
+  .ant-list-item-meta-content {
+    @include flex(space-between)
+  }
+}
+
+//显示图片
+.showImgModal{
+  .ant-modal-content{
+    background: transparent;
+    box-shadow: unset;
+    .ant-modal-close-x{
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+}
